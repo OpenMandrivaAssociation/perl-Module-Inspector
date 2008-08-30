@@ -16,6 +16,7 @@ BuildRequires: perl-devel
 BuildArch: noarch
 
 %description
+An integrated API for inspecting Perl distributions 
 
 
 %prep
