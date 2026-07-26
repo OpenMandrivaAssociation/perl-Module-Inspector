@@ -1,15 +1,13 @@
 %define upstream_name    Module-Inspector
-%define upstream_version 1.05
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	1.05
+Release:	7
 
 Summary:	An integrated API for inspecting Perl distributions 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Module-Inspector
-Source0:	https://cpan.metacpan.org/authors/id/A/AD/ADAMK/Module-Inspector-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AD/ADAMK/Module-Inspector-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -19,7 +17,7 @@ BuildArch:	noarch
 An integrated API for inspecting Perl distributions 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -44,9 +42,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.50.0-1mdv2011.0
 + Revision: 403864
-- rebuild using %%perl_convert_version
-
-* Sat Aug 30 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 1.05-1mdv2009.0
+- rebuild using %1.05 Sat Aug 30 2008 Nicolas Lécureuil <nlecureuil@mandriva.com> 1.05-1mdv2009.0
 + Revision: 277610
 - Add description
 - import perl-Module-Inspector
